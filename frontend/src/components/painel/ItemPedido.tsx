@@ -1,3 +1,4 @@
+import { EllipsisVerticalIcon } from 'lucide-react';
 import type { Pedido } from '../../data/mockData';
 import { Chip } from '../common/Chip'
 
@@ -30,7 +31,7 @@ export function ItemPedido({ pedido }: ItemPedidoProps) {
     const corDoStatus = getStatusColor(pedido.status)
 
     return (
-        <tr className='hover:bg-gray-50'>
+        <tr className='hover:bg-gray-200'>
             {/* as celulas de td com os dados do 'pedido */}
             <td className='py-3 px-4 text-sm text-gray-900 font-medium'>
                 {pedido.codigo}
@@ -45,7 +46,7 @@ export function ItemPedido({ pedido }: ItemPedidoProps) {
                 <Chip label={pedido.status} colorClasses={corDoStatus}/>
             </td>
             <td className='py-3 px-4 text-center text-gray-500 font-bold cursor-pointer hover:text-gray-900'>
-                ...
+                <EllipsisVerticalIcon/>
             </td>
         </tr>
     )
