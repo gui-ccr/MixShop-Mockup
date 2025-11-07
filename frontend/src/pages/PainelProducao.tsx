@@ -6,15 +6,19 @@ export function PainelProducao() {
   const [pedidos, setPedidos] = useState<Pedido[]>(mockPedidos);
 
   return (
-    <div className="flex h-screen w-screen flex-col items-center bg-gray-900 p-8 text-white">
-      <h1 className="text-3xl font-bold text-blue-400">
-        Painel de Produção - Mix Shop
-      </h1>
+    <>
+      <div className="flex w-screen flex-col items-center bg-gray-100 p-8 min-h-screen">
+        
+        <div className="w-full max-w-6xl mb-4">
+            <h1 className='text-2xl font-bold text-gray-800'>Pedidos</h1>
+        </div>
 
-      {/* 2. O Chefe de Obras agora só DELEGA a tarefa.
-             Ele passa a lista de 'pedidos' e o componente 'FilaPedidos'
-             se vira para renderizar. */}
-      <FilaPedidos pedidos={pedidos} />
-    </div>
+        {/* centralizando a tabela com uma largura maxima */}
+
+        <div className='w-full max-w-6xl'>
+          <FilaPedidos pedidos={pedidos}/>
+        </div>
+      </div>
+    </>
   );
 }

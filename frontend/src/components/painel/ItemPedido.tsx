@@ -1,21 +1,22 @@
 import { Pedido } from '../../data/mockData';
+import { Chip } from '../common/Chip'
 
 const getStatusColor = (status: Pedido['status']) => {
     switch (status) {
         case "Pendente":
-            return 'bg-gray-500';
+            return 'bg-gray-200 text-gray-800';
         case "Imprimindo":
-            return 'bg-yellow-500';
+            return 'bg-yellow-200 text-yellow-800';
         case "Parcial":
-            return 'bg-orange-500';
+            return 'bg-orange-200 text-orange-800';
         case "Concluído":
-            return 'bg-green-500';
+            return 'bg-green-200 text-green-800';
         case "Embalado":
-            return 'bg-blue-500';
+            return 'bg-blue-200 text-blue-800';
         case "Enviado":
-            return 'bg-purple-500';
+            return 'bg-purple-200 text-purple-800';
         default:
-            return 'bg-gray-200 text-black';
+            return 'bg-gray-100 text-black';
     }
 }
 
@@ -25,18 +26,27 @@ type ItemPedidoProps = {
 
 
 export function ItemPedido({ pedido }: ItemPedidoProps) {
+    
+    const corDoStatus = getStatusColor(pedido.status)
+
     return (
-        <li className="flex justify-between rounded-lg bg-gray-800 p-4 shadow-md">
-      <div className="flex flex-col">
-        <span className="font-bold text-gray-200">{pedido.descricao}</span>
-        <span className="text-sm text-gray-400">SKU: {pedido.sku}</span>
-      </div>
-      <div className="flex items-center">
-        {/* TODO: Mudar a cor com base no status */}
-        <span className={`${getStatusColor(pedido.status)} rounded-full px-3 py-1 text-sm font-medium`}>
-          {pedido.status}
-        </span>
-      </div>
-    </li>
+        <tr className='hover:bg-gray-50'>
+            {/* as celulas de td com os dados do 'pedido */}
+            <td className='py-3 px-4 text-sm text-gray-900 font-medium'>
+                {pedido.codigo}
+            </td>
+            <td className='py-3 px-4 text-sm text-gray-600'>
+                {pedido.sku}
+            </td>
+            <td className='py-3 px-4 text-sm text-gray-900 font-medium'>
+                {pedido.descricao}
+            </td>
+            <td className='py-3 px-4 text-sm'>
+                <Chip label={pedido.status} colorClasses={corDoStatus}/>
+            </td>
+            <td className='py-3 px-4 text-center text-gray-500 font-bold cursor-pointer hover:text-gray-900'>
+                ...
+            </td>
+        </tr>
     )
 }
