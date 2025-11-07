@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { mockPedidos, Pedido } from '../data/mockData';
+import { mockPedidos } from '../data/mockData';
+import type { Pedido } from '../data/mockData';
 import { FilaPedidos } from '../components/painel/FilaPedidos'; // 1. Importa o "Mestre de Obras"
 
 export function PainelProducao() {

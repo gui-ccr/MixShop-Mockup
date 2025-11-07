@@ -1,4 +1,4 @@
-import { Pedido } from '../../data/mockData';
+import type { Pedido } from '../../data/mockData';
 import { Chip } from '../common/Chip'
 
 const getStatusColor = (status: Pedido['status']) => {
