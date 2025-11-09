@@ -31,7 +31,7 @@ export function FilaPedidos({ pedidos }: FilaPedidosProps) {
     <div className="overflow-x-auto">
       <table className="w-full text-left">
         {/* cabeçalho <thead> fundo cinza claro*/}
-        <thead className="bg-gray-50">
+        <thead className="bg-gray-100">
           <th className="py-3 px-4 text-sm font-semibold text-gray-600">Código</th>
           <th className="py-3 px-4 text-sm font-semibold text-gray-600">SKU</th>
           <th className="py-3 px-4 text-sm font-semibold text-gray-600">Descrição</th>

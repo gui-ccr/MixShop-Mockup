@@ -3,7 +3,8 @@ import { HomeIcon, PackageIcon, BarChart2Icon, SettingsIcon, LogOutIcon, ChartAr
 
 export function Sidebar() {
     return (
-        <aside className='h-screen w-50 bg-white text-white p-5 flex flex-col'>
+        <aside className='hidden md:flex h-screen w-50 flex-col bg-white p-4 text-white sticky top-0'>
+            
             {/* LOGO */}
         <div className='mb-8'>
             <h2 className='text-2xl font-bold text-black'>Mix Shop</h2>
