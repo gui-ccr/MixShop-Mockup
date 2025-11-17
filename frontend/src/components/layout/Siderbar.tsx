@@ -1,4 +1,4 @@
-import { HomeIcon, PackageIcon, BarChart2Icon, SettingsIcon, LogOutIcon, ChartAreaIcon, BoxesIcon, WalletIcon, UserPenIcon, ScanBarcodeIcon, SeparatorVerticalIcon } from 'lucide-react'
+import { HomeIcon, PackageIcon, BarChart2Icon, SettingsIcon, LogOutIcon, BoxesIcon, WalletIcon, UserPenIcon, ScanBarcodeIcon, SeparatorVerticalIcon } from 'lucide-react'
 
 
 export function Sidebar() {
