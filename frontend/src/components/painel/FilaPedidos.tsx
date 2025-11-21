@@ -1,4 +1,4 @@
-import type { Pedido } from "../../data/mockData";
+import type { Pedido } from "../../types/types";
 import { SearchBar } from "../common/SearchBar";
 import { ItemPedido } from "./ItemPedido";
 

@@ -1,5 +1,5 @@
 import { EllipsisVerticalIcon } from 'lucide-react';
-import type { Pedido } from '../../data/mockData';
+import type { Pedido } from '../../types/types';
 import { Chip } from '../common/Chip'
 
 const getStatusColor = (status: Pedido['status']) => {
